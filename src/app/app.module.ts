@@ -8,6 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { EventManagerComponent } from './examples/event-manager.component';
 import { ContentChildComponent } from './examples/content-child.component';
 import { NgTemplateOutletComponent } from './examples/ng-template-outlet.component';
+import { TextboxContainerComponent } from './examples/content-child/textbox-container.component';
+import { TextboxDirective } from './examples/content-child/textbox.directive';
 
 const routes: Routes = [
   {path: 'eventmanager', component: EventManagerComponent},
@@ -20,7 +22,9 @@ const routes: Routes = [
     AppComponent,
     EventManagerComponent,
     ContentChildComponent,
-    NgTemplateOutletComponent
+    NgTemplateOutletComponent,
+    TextboxContainerComponent,
+    TextboxDirective
   ],
   imports: [
     BrowserModule,
