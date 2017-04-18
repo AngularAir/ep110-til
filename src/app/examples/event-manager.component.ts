@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { EventManager } from '@angular/platform-browser';
+
 @Component({
   selector: 'til-event-manager',
   template: `
@@ -34,7 +35,13 @@ export class EventManagerComponent {
   constructor(private eventManager: EventManager) {
     this.eventManager.addGlobalEventListener(
       'window',
-      'keyup.a',
+      'keydown.control.a',
+      (e) => {
+        e.preventDefault();
+      });
+    this.eventManager.addGlobalEventListener(
+      'window',
+      'keyup.control.a',
       () => {
         this.selected = !this.selected;
       });

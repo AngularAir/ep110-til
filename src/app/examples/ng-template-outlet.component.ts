@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
       <a href="https://angular.io/docs/ts/latest/api/common/index/NgTemplateOutlet-directive.html">Documentation</a>
     </h4>
 
-    <ng-container *ngTemplateOutlet="product; context: {item:item1}"></ng-container>
-    <ng-container [ngTemplateOutlet]="product" [ngOutletContext]="{item:item2}"></ng-container>
+    <ng-container 
+      *ngTemplateOutlet="product; context: {item:item1}"></ng-container>
+    <ng-container 
+      [ngTemplateOutlet]="product" 
+      [ngOutletContext]="{item:item2}"></ng-container>
     
     <ng-template #product let-product="item">
       <div>
